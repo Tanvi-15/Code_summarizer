@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.eggs/
+dist/
+build/
+sdist/
+*.egg-info/
+*.deb
+*.rpm
+*.exe
+
+# Installation
+develop-eggs/
+pip-log.txt
+pip-wheel-metadata/
+*.egg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+VENV/
+*.env*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data and model files
+data/
+models/
+*.csv
+*.json
+*.model
+*.h5
+*.pb
+*.tflite
+
+# Logging and temp files
+logs/
+temp/
+tmp/
+*.log
+
+# OS or Editor-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python-specific ignores
+*.pyc
