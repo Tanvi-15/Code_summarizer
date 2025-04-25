@@ -13,46 +13,49 @@ sdist/
 *.rpm
 *.exe
 
-# Installation
-develop-eggs/
-pip-log.txt
-pip-wheel-metadata/
-*.egg
+# PyInstaller
+#  Often these are written into a dist folder.
+# _MEIPASS*
+# !dist/
+# !build/
+# !sdist/
+# __pycache__/
 
 # Environments
-.env
 .venv
-env/
-venv/
-ENV/
-VENV/
-*.env*
+venv
+env
+ENV
+*.env
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Data and model files
-data/
-models/
-*.json
-*.model
-*.h5
-*.pb
-*.tflite
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.coverage
+*.lcov
+nosetests.xml
+coverage.xml
+*.pytest_cache
 
-# Logging and temp files
-logs/
-temp/
-tmp/
+# Translations
+*.mo
+*.pot
+
+# Log files and databases
 *.log
+*.sql
+*.sqlite
+*.db
 
-# OS or Editor-specific files
+# OS generated files
 .DS_Store
 Thumbs.db
-*.swp
-*.swo
-.vscode/
-.idea/
 
-# Python-specific ignores
-*.pyc
+# Data and model files (Optional, depending on project needs)
+data/
+models/

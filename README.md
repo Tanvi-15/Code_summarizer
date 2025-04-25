@@ -9,19 +9,29 @@ This project generates concise docstrings for Java methods using transformer-bas
 
 ```
 .
-├── demo.py                              # 🔧 CLI demo script
+├── demo.py                              #  CLI demo script
 ├── decoder_only_models/
+│   └── Custom_model.ipynb               # Notebook for custom decoder-only model
 │   └── gpt2_training.ipynb              # Notebook for GPT2 training
 ├── encoder_decoder_models/
 │   ├── codet5_finetune_train.ipynb      # Notebook to fine-tune CodeT5
-│   ├── codet5_finetune_inference.ipynb  # Run inference & generate metrics
 │   └── custom_encoder_decoder.ipynb     # Run inference & generate metrics
+├── Model_inference_and_evaluation
+│   └── finetune_models_inference.ipynb  # Run analysis on fine-tuned models
 ├── resources/                           # All the csv files with generated summaries on validation & test sets
-│   ├── codet5_val_baseline_beam.csv
-│   ├── codet5_val_baseline_beam_repetition.csv
-│   ├── codet5_val_topk_sampling.csv
-│   ├── custom_test_topk_sampling.csv
-│   └── custom_val_topk_sampling.csv
+│   └── decoder-only-summaries
+│       ├── GPT2_test_sampling_output.csv
+│       ├── GPT2_val_beam_repetition.csv
+│       ├── GPT2_val_predictions.csv\
+│       └── GPT2_val_sampling_topk.csv
+│   └── encoder-decoder-summaries
+│       ├──codet5_val_baseline_beam.csv
+│       ├── codet5_val_baseline_beam_repetition.csv
+│       ├── codet5_val_topk_sampling.csv
+│       ├── custom_test_topk_sampling.csv
+│       └── custom_val_topk_sampling.csv
+│
+├── requirements.txt  
 └── README.md
 ```
 
@@ -31,11 +41,6 @@ This project generates concise docstrings for Java methods using transformer-bas
 
 ### ✅ Step 1: Install Requirements
 
-```bash
-pip install transformers datasets evaluate torch pandas
-```
-
-Or, if provided:
 
 ```bash
 pip install -r requirements.txt
@@ -48,6 +53,10 @@ pip install -r requirements.txt
 ```bash
 python demo.py --code "public int add(int a, int b) { return a + b; }"
 ```
+OR
+```bash
+python demo.py --code "<Java code snippe in one line>"
+```
 
 You will be prompted to choose one of the models.
 
@@ -59,7 +68,7 @@ You will be prompted to choose one of the models.
 |--------|------------------------------------------------|
 |   1    | Fine-tuned GPT2 (decoder-only)                 |
 |   2    | Custom decoder-only model                      |
-|   3    | Fine-tuned CodeT5 (encoder-decoder) ✅         |
+|   3    | Fine-tuned CodeT5 (encoder-decoder)          |
 |   4    | Custom encoder-decoder model                   |
 
 ---
@@ -71,7 +80,7 @@ To evaluate different decoding strategies and analyze Finetuned Model performanc
 ### 👉 Open this notebook in Google Colab:
 
 ```
-encoder_decoder_models/codet5_finetune_inference.ipynb
+Model_Inference_and_Evaluation/finetune_models_inference.ipynb
 ```
 
 It allows you to:
@@ -82,9 +91,10 @@ It allows you to:
 
 ---
 
-To evaluate summaries and analyze Custom Model performance:
 
-### 👉 Open this notebook in Google Colab:
+#### To evaluate summaries and analyze *Custom* *Model* *performance*:
+For Custom Encoder-decoder model
+#### 👉 Open this notebook in Google Colab:
 
 ```
 encoder_decoder_models/custom_encoder_decoder.ipynb
@@ -97,6 +107,14 @@ It allows you to:
 - Save the result summaries as `.csv`. Make sure to pass a custom path (if needed) to `.generate_summaries()` funtion's third parameter to save the files.
 - Compute metrics: ROUGE, BLEU, BERTScore, repetition  on the csv files generated previously.
 - Display a comparison table
+
+
+For Custom Decoder Only Model
+
+```
+decoder_only_model/Custom_model.ipynb
+```
+TBC
 
 ---
 
@@ -121,7 +139,7 @@ It allows you to:
 
 - Hugging Face Model: [`pritammane105/CodeT5-Java-Summarisation`](https://huggingface.co/pritammane105/CodeT5-Java-Summarisation)
 - Hugging Face Model: [`pritammane105/Custom-Java-Summarisation`](https://huggingface.co/pritammane105/Custom-Java-Summarisation)
-
+- Hugging Face Model: [`pritammane105/GPT2-Code-Summarisation`](https://huggingface.co/pritammane105/GPT2-Code-Summarisation)
 ---
 
 ## 📌 Notes
@@ -132,6 +150,3 @@ It allows you to:
 
 ---
 
-## 📬 Contact
-
-Feel free to raise an issue or reach out via GitHub if you have questions or feedback.

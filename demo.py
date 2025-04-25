@@ -366,10 +366,10 @@ def main():
     print("Choose a model:")
     print("1. Model 1 (Fine-tuned GPT2: Decoder-Only)")
     print("2. Model 2 (Custom Model: Decoder-Only)")
-    print("1. Model 3 (Fine-tuned CodeT5: Encoder-Decoder)")
-    print("2. Model 4 (Custom Model: Encoder-Decoder)")
+    print("3. Model 3 (Fine-tuned CodeT5: Encoder-Decoder)")
+    print("4. Model 4 (Custom Model: Encoder-Decoder)")
 
-    choice = input("Enter your choice (1 or 2): ").strip()
+    choice = input("Enter your choice: ").strip()
 
     if not choice:
         print("Error: You must provide a choice.")
