@@ -16,6 +16,11 @@ from typing import List, Dict, Optional
 from tqdm import tqdm
 import math
 import re
+import os
+import gdown
+import requests
+
+
 
 # ================================== Custom DECODER-ONLY MODEL for M8 ====================================
 class DecoderOnlyModel(nn.Module):
@@ -252,9 +257,18 @@ def get_custom_tokenizer():
 
 
 def load_custom_model(model_path="M8_final_model.pth", d_model=768, n_heads=8, n_layers=6):
+    print("📥 Downloading model from Hugging Face...")
+    
+    model_path = hf_hub_download(
+        repo_id="Tanvi-15/Custom_DecoderOnlyModel",  # Replace with your actual repo path
+        filename="M8_final_model.pth"
+    )
+
     tokenizer = get_custom_tokenizer()
     model = DecoderOnlyModel(len(tokenizer), d_model, n_heads, n_layers)
-    model.load_state_dict(torch.load(model_path, map_location="cpu"))
+
+    state_dict = torch.load(model_path, map_location="cpu", weights_only=False)
+    model.load_state_dict(state_dict)
     model.eval()
     return model, tokenizer
 
