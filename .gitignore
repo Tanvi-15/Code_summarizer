@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.eggs/
+dist/
+build/
+sdist/
+*.egg-info/
+*.deb
+*.rpm
+*.exe
+
+# PyInstaller
+#  Often these are written into a dist folder.
+# _MEIPASS*
+# !dist/
+# !build/
+# !sdist/
+# __pycache__/
+
+# Environments
+.venv
+venv
+env
+ENV
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.coverage
+*.lcov
+nosetests.xml
+coverage.xml
+*.pytest_cache
+
+# Translations
+*.mo
+*.pot
+
+# Log files and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Data and model files (Optional, depending on project needs)
+data/
+models/
