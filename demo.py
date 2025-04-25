@@ -296,7 +296,7 @@ def generate_docstring_custom_model(model, tokenizer, code_snippet, max_length=1
 
 def generate_docstring_few_shot(test_code, model_choice):
     if model_choice == "1":
-        model_path = "./gpt2-docstring-model"
+        model_path = "pritammane105/GPT2-Code-Summarisation"
         few_shot_prompt = """
 <s> public int add(int a, int b) { return a + b; } </s> <sep> Adds two integers and returns the sum.
 
