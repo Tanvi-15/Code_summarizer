@@ -39,7 +39,7 @@ This project generates concise docstrings for Java methods using transformer-bas
 
 ## 🚀 How to Run the Demo
 
-### ✅ Step 1: Install Requirements
+### ✅ Step 1: Install Requirements (Setup Env)
 
 
 ```bash
@@ -75,7 +75,7 @@ You will be prompted to choose one of the models.
 
 ## 📊 Inference & Evaluation (Colab Recommended)
 
-To evaluate different decoding strategies and analyze Finetuned Model performance:
+To evaluate different decoding strategies and analyze *Finetuned* *Model* performance:
 
 ### 👉 Open this notebook in Google Colab:
 
@@ -92,9 +92,9 @@ It allows you to:
 ---
 
 
-#### To evaluate summaries and analyze *Custom* *Model* *performance*:
+To evaluate summaries and analyze *Custom* *Model* *performance*:
 For Custom Encoder-decoder model
-#### 👉 Open this notebook in Google Colab:
+### 👉 Open this notebook in Google Colab:
 
 ```
 encoder_decoder_models/custom_encoder_decoder.ipynb
@@ -123,7 +123,6 @@ TBC
 - **ROUGE-1 / ROUGE-2 / ROUGE-L**
 - **BLEU Score**
 - **BERTScore**
-- **Exact Match Accuracy**
 - **Average Token Repetition**
 
 ---
