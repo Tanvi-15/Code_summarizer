@@ -10,12 +10,12 @@ This project generates concise docstrings for Java methods using transformer-bas
 ```
 .
 ├── demo.py                              #  CLI demo script
-├── decoder_only_models/
+├── decoder_only_models
 │   └── Custom_model.ipynb               # Notebook for custom decoder-only model
-│   └── gpt2_training.ipynb              # Notebook for GPT2 training
-├── encoder_decoder_models/
-│   ├── codet5_finetune_train.ipynb      # Notebook to fine-tune CodeT5
-│   └── custom_encoder_decoder.ipynb     # Run inference & generate metrics
+│   └── GPT2_Finetune.ipynb              # Notebook for GPT2 finetune training
+├── Encoder_Decoder_Models
+│   ├── codet5_finetune_training.ipynb   # Notebook for fine-tuning CodeT5
+│   └── custom_encoder_decoder.ipynb     # Notebook for custom encoder-decoder training and evaluation
 ├── Model_inference_and_evaluation
 │   └── finetune_models_inference.ipynb  # Run analysis on fine-tuned models
 ├── resources/                           # All the csv files with generated summaries on validation & test sets
@@ -25,8 +25,8 @@ This project generates concise docstrings for Java methods using transformer-bas
 │       ├── GPT2_val_predictions.csv\
 │       └── GPT2_val_sampling_topk.csv
 │   └── encoder-decoder-summaries
-│       ├──codet5_val_baseline_beam.csv
-│       ├── codet5_val_baseline_beam_repetition.csv
+│       ├── codet5_val_baseline_beam.csv
+│       ├── codet5_val_beam_repetition.csv
 │       ├── codet5_val_topk_sampling.csv
 │       ├── custom_test_topk_sampling.csv
 │       └── custom_val_topk_sampling.csv
