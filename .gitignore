@@ -34,7 +34,6 @@ VENV/
 # Data and model files
 data/
 models/
-*.csv
 *.json
 *.model
 *.h5
