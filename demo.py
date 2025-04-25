@@ -17,7 +17,6 @@ from tqdm import tqdm
 import math
 import re
 import os
-import gdown
 import requests
 
 
@@ -53,9 +52,6 @@ def get_sinusoidal_encoding(max_len, d_model):
     pe[:, 1::2] = torch.cos(position * div_term)
     return pe.unsqueeze(0)  # [1, max_len, d_model]
 
-# ==========================
-# Model Components
-# ==========================
 class MultiHeadAttention(nn.Module):
     def __init__(self, embed_dim, num_heads):
         super().__init__()
